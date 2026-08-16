@@ -15,9 +15,17 @@
 <img width="1452" height="771" alt="image" src="https://github.com/user-attachments/assets/29bab3cb-95b3-4503-8999-2ecfdfa3d0b9" />
 
 **EC2启动参数（AMI、实例类型、密钥、安全组）。**
+<img width="1347" height="897" alt="image" src="https://github.com/user-attachments/assets/0a1c3976-9ae4-4720-bf0d-5d9edb3de358" />
 
-**Nginx部署命令（dnf install、systemctl start）。**
+<img width="1377" height="562" alt="image" src="https://github.com/user-attachments/assets/ad30dd6d-035f-4b70-917e-d7901ad07e90" />
 
-**安全组与NACL对比表（把上面“有状态vs无状态”那段抄进去）。**
+<img width="1770" height="450" alt="image" src="https://github.com/user-attachments/assets/be89c045-61c2-4b4e-a949-63b53251a5d5" />
+
+
+**安全组与NACL对比表**
+
+组件	状态特性	核心区别（面试回答模板）
+Security Group（安全组）	有状态（Stateful）	只要我允许了入站请求（如22端口），那么从这个EC2返回的响应包，无论出站规则怎么设，都会自动放行。（你不需要额外配出站规则）
+Network ACL（网络ACL）	无状态（Stateless）	入站和出站规则必须同时配置。如果入站允许了22，出站必须显式允许高位端口（1024-65535）的回复包，否则连接不通。
 
 **验证方法：curl 命令和浏览器访问截图。**
