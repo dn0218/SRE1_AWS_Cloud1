@@ -1,13 +1,13 @@
 # 目标：用 dd 填满磁盘，然后用 SOP 排查并修复。
 
-## 步骤 1：制造故障
+## 制造故障
 往 /root 目录下写 6.5GB 大文件（因为根分区剩余 6.3GB，6.5G 刚好填满）
 ```bash 
 dd if=/dev/zero of=/root/diskfill bs=1M count=6500
 ```
 <img width="766" height="306" alt="image" src="https://github.com/user-attachments/assets/cab96dae-d6d8-41b1-9bd2-ba1c5d40332e" />
 
-## 步骤 2：观察现象
+## 观察现象
 确认根目录填满
 ```bash
 df -h
@@ -57,6 +57,7 @@ systemctl status nginx
 ```   
 <img width="1885" height="455" alt="image" src="https://github.com/user-attachments/assets/ee9eb02d-8c84-4f82-90a0-7584a7fd976c" />
 
-## 步骤 3：用三层排查法定位
 
-## 步骤 4：修复
+## 修复
+<img width="681" height="282" alt="image" src="https://github.com/user-attachments/assets/188a7c7b-5de5-410b-8e86-7fbed91ee8c9" />
+
