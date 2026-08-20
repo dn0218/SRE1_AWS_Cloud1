@@ -30,3 +30,6 @@ lsof +L1 #显示link count为 0 的文件
 
 - 严格遵循 **'测试-重载'（Test-Reload） 流程**
 - 先用 **nginx -t 验证语法**，确认无误后执行 **nginx -s reload 实现平滑生效** ，绝不直接使用 systemctl restart 以避免服务中断
+- tips:
+  | nginx -t; nginx -s reload （**不管前一条命令是否失败，后一条命令都会执行**） | nginx -t && nginx -s reload （**-t 成功 && 才触发 reload**） |
+  | --- | --- |
